@@ -2,17 +2,14 @@
   <img alt="Logo" src="https://realmohsin.io/favicon.ico" />
 </div>
 <h1 align="center">
-  Real Mohsin - Portfolio Site
+  Real Mohsin - Personal Website
 </h1>
 <p align="center">
 DESIGNER & DEVELOPER
 </p>
 
-<p align="center">
-Hello. I am a software engineer who enjoys building things for the internet.  I develop exceptional websites and applications that provide intuitive, pixel-perfect user interfaces with modern, performant backends.
-
-I enjoy working with entrepreneurs who are as passionate and competitive about their business as I am about my software.
-
+<p>
+Hello. I am a software engineer who enjoys building things for the internet.  I develop exceptional websites and applications that provide intuitive, pixel-perfect user interfaces with modern, performant backends. I enjoy working with entrepreneurs who are as passionate and competitive about their business as I am about my software.
 </p>
 
 <br>
