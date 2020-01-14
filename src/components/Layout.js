@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { Global, css } from '@emotion/core'
+import Navigation from './Navigation'
 import HeaderSection from './HeaderSection'
 import FooterSection from './FooterSection'
 
@@ -15,12 +16,14 @@ class Layout extends React.Component {
             name='description'
             content='Real Mohsin - Web Developer. Freelance Software Designer and Engineer creating high-end websites and applications for the Internet. Based in New York City but available around the world.'
           />
+
           <link
-            href='https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap'
+            href='https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap'
             rel='stylesheet'
           />
         </Helmet>
         <Global styles={globalStyles} />
+        <Navigation />
         <HeaderSection
           primaryTitle='Real Mohsin'
           secondaryTitle='Designer & Developer'
@@ -42,8 +45,12 @@ const globalStyles = css`
   }
 
   body {
+    font-size: 20px;
     padding: 30px;
     font-family: 'Roboto Condensed', sans-serif;
+    @media (max-width: 900px) {
+      padding: 0;
+    }
   }
 
   ul {

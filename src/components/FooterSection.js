@@ -79,11 +79,15 @@ const FooterSection = props => (
 
 const footerSectionCss = css`
   font-size: 20px;
-  padding: 80px 25px;
+  padding: 80px 55px 100px;
   background-color: ${colors.grayFour};
   margin-top: -95px;
   position: relative;
   z-index: 100;
+
+  @media (max-width: 1400px) {
+    font-size: 18px;
+  }
 `
 
 const logoContainerCss = css`
@@ -96,12 +100,19 @@ const gridCellCss = css`
   padding-top: 20px;
   display: flex;
   width: 405px;
+
+  @media (max-width: 1400px) {
+    width: 360px;
+  }
 `
 
 const leftContentCss = css`
   ${gridCellCss};
   margin-left: 20px;
   justify-content: space-between;
+  @media (max-width: 1035px) {
+    margin: 0 auto 50px;
+  }
 `
 
 const rightContentCss = css`
@@ -110,6 +121,9 @@ const rightContentCss = css`
   margin-left: auto;
   margin-right: 20px;
   & > p {
+    margin: 0 auto;
+  }
+  @media (max-width: 1035px) {
     margin: 0 auto;
   }
 `

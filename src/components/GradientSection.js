@@ -17,11 +17,16 @@ const gradientSectionCss = css`
       rgba(255, 119, 48, 0.7)
     ),
     url('/bg-gradient-section.jpg');
-  background-size: 150%;
-  background-position: 45% 40%;
-  height: 1235px;
+  background-size: 160%;
+  background-position: 45% 55%;
+  max-height: 1235px;
   margin-top: -115px;
-  padding: 115px 0;
+  padding: 115px 55px;
+
+  @media (max-width: 1725px) {
+    background-size: 185%;
+    background-position: 45% 45%;
+  }
 `
 
 export default GradientSection
