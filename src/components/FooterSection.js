@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { css } from '@emotion/core'
 import SectionGrid from './SectionGrid'
+import Container from '../emotion/styled-components/Container'
 import colors from '../emotion/colors'
 
 const FooterSection = props => (
@@ -14,65 +15,71 @@ const FooterSection = props => (
       />
     </div>
 
-    <SectionGrid>
-      <div css={leftColumnCss}>
-        <ul css={cellContainerCss}>
-          <li css={footerItemCss}>
-            <a onClick={props.handleGoingToHeader} href='#' css={footerLinkCss}>
-              Home
-            </a>
-          </li>
-          <li css={footerItemCss}>
-            <a onClick={props.handleGoingToPort} href='#' css={footerLinkCss}>
-              Portfolio
-            </a>
-          </li>
-          <li css={footerItemCss}>
-            <a
-              href='https://github.com/realmohsin'
-              target='_blank'
-              rel='noopener'
-              css={footerLinkCss}
-            >
-              Github
-            </a>
-          </li>
-          <li css={footerItemCss}>
-            <Link to='/resume' css={footerLinkCss}>
-              Resume
-            </Link>
-          </li>
-          <li css={footerItemCss}>
-            <a href='mailto:realmohsin@outlook.com' css={footerLinkCss}>
-              Email
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div css={rightColumnCss}>
-        <div css={cellContainerCss}>
-          <p>
-            &copy; 2018 by
-            <a
-              onClick={props.handleGoingToHeader}
-              href='#'
-              css={footerLinkRightCss}
-            >
-              {' '}
-              &nbsp;Real Mohsin&nbsp;{' '}
-            </a>
-            All rights reserved.
-          </p>
+    <Container maxWidth='1400px'>
+      <SectionGrid>
+        <div>
+          <ul css={leftContentCss}>
+            <li>
+              <a
+                onClick={props.handleGoingToHeader}
+                href='#'
+                css={footerLinkCss}
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a onClick={props.handleGoingToPort} href='#' css={footerLinkCss}>
+                Portfolio
+              </a>
+            </li>
+            <li>
+              <a
+                href='https://github.com/realmohsin'
+                target='_blank'
+                rel='noopener'
+                css={footerLinkCss}
+              >
+                Github
+              </a>
+            </li>
+            <li>
+              <Link to='/resume' css={footerLinkCss}>
+                Resume
+              </Link>
+            </li>
+            <li>
+              <a href='mailto:realmohsin@outlook.com' css={footerLinkCss}>
+                Email
+              </a>
+            </li>
+          </ul>
         </div>
-      </div>
-    </SectionGrid>
+
+        <div>
+          <div css={rightContentCss}>
+            <p>
+              &copy; 2018 by
+              <a
+                onClick={props.handleGoingToHeader}
+                href='#'
+                css={footerLinkRightCss}
+              >
+                {' '}
+                &nbsp;Real Mohsin&nbsp;{' '}
+              </a>
+              All rights reserved.
+            </p>
+          </div>
+        </div>
+      </SectionGrid>
+    </Container>
   </footer>
 )
 
 const footerSectionCss = css`
   font-size: 20px;
-  padding: 80px 250px;
+  padding: 80px 25px;
   background-color: ${colors.grayFour};
   margin-top: -95px;
   position: relative;
@@ -84,21 +91,26 @@ const logoContainerCss = css`
   margin-bottom: 35px;
 `
 
-const leftColumnCss = css``
-
-const rightColumnCss = css`
-  color: ${colors.grayTwo};
-`
-
-const cellContainerCss = css`
+const gridCellCss = css`
   border-top: 1px solid ${colors.grayThree};
   padding-top: 20px;
   display: flex;
+  width: 405px;
 `
 
-const footerItemCss = css`
-  &:not(:last-child) {
-    margin-right: 20px;
+const leftContentCss = css`
+  ${gridCellCss};
+  margin-left: 20px;
+  justify-content: space-between;
+`
+
+const rightContentCss = css`
+  ${gridCellCss};
+  color: ${colors.grayTwo};
+  margin-left: auto;
+  margin-right: 20px;
+  & > p {
+    margin: 0 auto;
   }
 `
 
