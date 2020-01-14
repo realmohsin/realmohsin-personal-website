@@ -45,6 +45,10 @@ const globalStyles = css`
     padding: 30px;
     font-family: 'Roboto Condensed', sans-serif;
   }
+
+  ul {
+    list-style: none;
+  }
 `
 
 export default Layout

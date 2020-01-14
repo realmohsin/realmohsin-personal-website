@@ -2,12 +2,7 @@ import React from 'react'
 import { css } from '@emotion/core'
 
 const SectionGrid = props => {
-  return (
-    <div css={sectionGridCss}>
-      <div>hello</div>
-      <div>world</div>
-    </div>
-  )
+  return <div css={sectionGridCss}>{props.children}</div>
 }
 
 const sectionGridCss = css`
