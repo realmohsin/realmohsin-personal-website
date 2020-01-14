@@ -16,10 +16,10 @@ const gradientSectionCss = css`
       rgba(255, 185, 0, 0.7),
       rgba(255, 119, 48, 0.7)
     ),
-    url('/header-background.jpg');
-  background-size: cover;
+    url('/bg-gradient-section.jpg');
+  background-size: 150%;
   background-position: 45% 40%;
-  height: 970px;
+  height: 1235px;
   margin-top: -115px;
   padding: 115px 0;
 `

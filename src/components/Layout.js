@@ -2,6 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { Global, css } from '@emotion/core'
 import HeaderSection from './HeaderSection'
+import FooterSection from './FooterSection'
 
 class Layout extends React.Component {
   render () {
@@ -25,7 +26,7 @@ class Layout extends React.Component {
           secondaryTitle='Designer & Developer'
         />
         {this.props.children}
-        {/* <FooterSection /> */}
+        <FooterSection />
       </>
     )
   }

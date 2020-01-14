@@ -11,8 +11,8 @@ const GraySection = props => {
 }
 
 const graySectionCss = css`
-  background-color: ${colors.grayBackground};
-  height: 970px;
+  background-color: ${colors.grayOne};
+  height: 985px;
   transform: skewY(-6deg);
   margin-top: -115px;
   padding: 115px 0;

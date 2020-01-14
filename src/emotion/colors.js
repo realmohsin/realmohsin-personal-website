@@ -1,6 +1,7 @@
 export default {
-  primary: '#ffb900', // rgb(255, 185, 0)
-  primaryLight: '#ffb900', // rgb(255, 185, 0)
-  primaryDark: '#ff7730', // rgb(255, 119, 48)
-  grayBackground: '#f7f7f7'
+  primaryOne: '#ffb900', // rgb(255, 185, 0)
+  primaryTwo: '#ff7730', // rgb(255, 119, 48)
+  grayOne: '#f7f7f7'
+  // gradientBgFirst: '#d4841a',
+  // gradientBgSecond:
 }

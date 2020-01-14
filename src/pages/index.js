@@ -9,6 +9,11 @@ class HomePage extends React.Component {
       <Layout>
         <GraySection />
         <GradientSection />
+        <GraySection />
+        <GradientSection />
+        <GraySection />
+        <GradientSection />
+        <GraySection />
       </Layout>
     )
   }
