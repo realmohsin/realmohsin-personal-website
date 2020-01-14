@@ -4,9 +4,9 @@ import colors from '../emotion/colors'
 
 const GradientSection = props => {
   return (
-    <div css={gradientSectionCss}>
+    <section css={gradientSectionCss}>
       <h3>gradient section</h3>
-    </div>
+    </section>
   )
 }
 

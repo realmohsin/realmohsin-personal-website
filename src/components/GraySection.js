@@ -1,12 +1,13 @@
 import React from 'react'
 import { css } from '@emotion/core'
+import SectionGrid from './SectionGrid'
 import colors from '../emotion/colors'
 
 const GraySection = props => {
   return (
-    <div css={graySectionCss}>
-      <h3>hello</h3>
-    </div>
+    <section css={graySectionCss}>
+      <SectionGrid />
+    </section>
   )
 }
 
