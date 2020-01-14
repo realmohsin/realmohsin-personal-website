@@ -28,11 +28,11 @@ class HeaderSection extends React.Component {
     const { hasLogoLoaded } = this.state
     return (
       <header css={headerCss}>
-        <div className='header__logo-box'>
+        <div css={logoContainerCss}>
           <img
             src='/signature.svg'
             alt='Logo'
-            className='header__logo'
+            css={logoCss}
             ref={this.imgRef}
           />
         </div>
@@ -78,9 +78,18 @@ const headerCss = css`
     ),
     url('/bg-header.jpg');
   background-size: cover;
-  background-position: 45% 40%;
+  background-position: 47% 40%;
   max-height: 100vh;
   height: 970px;
+  position: relative;
+
+  @media (max-width: 900px) {
+    background-position: 50% 40%;
+  }
+  @media (max-width: 445px) {
+    background-position: 50% 30%;
+    background-size: 300%;
+  }
 `
 
 const animationContainerCss = css`
@@ -98,24 +107,37 @@ const animationContainerCss = css`
     top: 38%;
   }
 
-  @media (max-width: 350px) {
+  @media (max-width: 390px) {
     top: 40%;
   }
 `
 
-const titleCss = css`
+const sharedTitleCss = css`
   color: #fff;
+  font-weight: 400;
   text-transform: uppercase;
   backface-visibility: hidden;
-  margin-bottom: 40px;
   text-shadow: 0px 0px 5px black;
 `
 
 const primaryTitleCss = css`
-  ${titleCss};
-  font-size: 90px;
-  font-weight: 400;
+  ${sharedTitleCss};
+  font-size: 78px;
+  margin-bottom: 10px;
+  letter-spacing: 4px;
   opacity: 0;
+
+  @media (max-width: 1350px) {
+    font-size: 72px;
+  }
+
+  @media (max-width: 1035px) {
+    font-size: 64px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 32px;
+  }
 `
 
 const primaryTitleAnimation = css`
@@ -123,9 +145,23 @@ const primaryTitleAnimation = css`
 `
 
 const secondaryTitleCss = css`
-  ${titleCss};
-  margin-bottom: 80px;
+  ${sharedTitleCss};
+  font-size: 28px;
+  margin-bottom: 60px;
   opacity: 0;
+  letter-spacing: 3px;
+
+  @media (max-width: 1350px) {
+    font-size: 26px;
+  }
+
+  @media (max-width: 1035px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 20px;
+  }
 `
 
 const secondaryTitleAnimation = css`
@@ -134,6 +170,34 @@ const secondaryTitleAnimation = css`
 
 const buttonAnimation = css`
   animation: ${moveInBottom} 0.5s ease-out 0.75s forwards;
+`
+
+const logoContainerCss = css`
+  position: absolute;
+  top: 30px;
+  left: 25px;
+
+  @media (max-width: 1800px) {
+    top: 25px;
+    left: 5px;
+  }
+
+  @media (max-width: 600px) {
+    top: 13px;
+    left: 0rem;
+  }
+`
+
+const logoCss = css`
+  height: 110px;
+
+  @media (max-width: 1800px) {
+    height: 85px;
+  }
+
+  @media (max-width: 600px) {
+    height: 60px;
+  }
 `
 
 export default HeaderSection

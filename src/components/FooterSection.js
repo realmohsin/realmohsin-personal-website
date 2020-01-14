@@ -8,11 +8,7 @@ import colors from '../emotion/colors'
 const FooterSection = props => (
   <footer id='test' className='footer' css={footerSectionCss}>
     <div className='footer__logo-box' css={logoContainerCss}>
-      <img
-        className='footer__logo-img'
-        src='/signature-v2.svg'
-        alt='footerLogo'
-      />
+      <img css={signatureV2Css} src='/signature-v2.svg' alt='footerLogo' />
     </div>
 
     <Container maxWidth='1400px'>
@@ -78,15 +74,22 @@ const FooterSection = props => (
 )
 
 const footerSectionCss = css`
-  font-size: 20px;
   padding: 80px 55px 100px;
   background-color: ${colors.grayFour};
   margin-top: -95px;
   position: relative;
   z-index: 100;
 
-  @media (max-width: 1400px) {
-    font-size: 18px;
+  @media (max-width: 600px) {
+    padding: 60px 20px 80px;
+  }
+
+  @media (max-width: 405px) {
+    padding: 60px 5px 80px;
+  }
+
+  @media (max-width: 395px) {
+    font-size: 14px;
   }
 `
 
@@ -99,10 +102,18 @@ const gridCellCss = css`
   border-top: 1px solid ${colors.grayThree};
   padding-top: 20px;
   display: flex;
-  width: 405px;
+  width: 415px;
 
   @media (max-width: 1400px) {
     width: 360px;
+  }
+
+  @media (max-width: 405px) {
+    width: 300px;
+  }
+
+  @media (max-width: 395px) {
+    width: 280px;
   }
 `
 
@@ -153,6 +164,12 @@ const footerLinkRightCss = css`
   &:visited {
     display: inline-block;
     margin: 0 5px;
+  }
+`
+
+const signatureV2Css = css`
+  @media (max-width: 600px) {
+    width: 100%;
   }
 `
 

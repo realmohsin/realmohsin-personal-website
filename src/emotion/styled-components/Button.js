@@ -3,7 +3,6 @@ import { css } from '@emotion/core'
 import colors from '../colors'
 
 const Button = styled.a`
-  font-size: 21px;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
   text-decoration: none;
@@ -13,6 +12,14 @@ const Button = styled.a`
   transition: all 0.2s;
   position: relative;
   cursor: pointer;
+
+  @media (max-width: 1035px) {
+    padding: 18px 35px;
+  }
+
+  @media (max-width: 1035px) {
+    padding: 14px 26px;
+  }
 
   &::after {
     content: '';
